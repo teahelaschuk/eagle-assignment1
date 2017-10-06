@@ -2,7 +2,7 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends Application
+class Fleet extends Application
 {
 
 	/**
@@ -19,8 +19,8 @@ class Welcome extends Application
 	 */
 	public function index()
 	{
-		$this->data['pagebody'] = 'welcome'; 
-                $this->data['pagetitle'] = 'BirdBrain - Home';
+		$this->data['pagebody'] = 'fleet'; 
+                $this->data['pagetitle'] = 'BirdBrain - Fleets';
 		$this->render(); 
 	}
 
