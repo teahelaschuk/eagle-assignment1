@@ -15,4 +15,9 @@ Release Date: 2017-10-5
 ## *Version 1.0.1*
 Release Date: 2017-10-5
 ### Added
+*** LH - 10.06.17 ***
+Added Bootstrap and menubar and fleet page
+
 ### Updated 
+*** LH - 10.06.17 ***
+welcome.php and template.php
