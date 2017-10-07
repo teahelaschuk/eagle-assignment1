@@ -25,3 +25,11 @@ welcome.php and template.php
 updated bootstrap version and added the flights page onto
 nav bar using config.php
 
+## *Version 1.0.2*
+Release Date: 2017-10-5
+
+### Added
+	- created model Fleet (NM)
+	- created model Flights (NM)
+### Updated 
+
