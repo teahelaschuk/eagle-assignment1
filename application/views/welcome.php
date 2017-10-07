@@ -1,16 +1,29 @@
-<div id="body">
-	<!-- <p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
-
-	<p>If you would like to edit this page you'll find it located at:</p>
-	<code>application/views/welcome_message.php</code>
-
-	<p>The corresponding controller for this page is found at:</p>
-	<code>application/controllers/Welcome.php</code>
-
-	<p>If you are exploring CodeIgniter for the very first time, you should 
-		start by reading the <a href="http://www.codeigniter.com/user_guide/">User Guide</a>.</p>
-        -->
-        <p>test1</p>
-        
-        
+<!-- Data to show: # of planes in your fleet, # flights scheduled on any day, and the names of your base airport and those that you fly to.  -->
+<div class="row">
+    <div class="span-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h1><span class="glyphicon glyphicon-plane"></span> Fleet</h1> 
+            </div>
+            <div class="panel-body">
+                <p>Show FLEET number</p>
+            </div>
+        </div>
+    </div>
+    <div class="span-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h1><span class="glyphicon glyphicon-plane"></span> Schedule</h1> 
+            </div>
+            <div class="panel-body">
+                <p>Show number of flights scheduled everyday</p>
+            </div>
+        </div>
+    </div>
 </div>
+<h1><span class="glyphicon glyphicon-plane"></span> Airports</h1>
+<!-- Will try and make it look purdy l8r -->
+<p>Base Airport: INSERT BASE AIRPORT NAME</p>
+<p>Connecting Airports: INSERT THEM COOL AIRPORT NAMES HURR</p>
+<br>
+<br>
