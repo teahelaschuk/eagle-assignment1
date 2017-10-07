@@ -17,7 +17,11 @@ Release Date: 2017-10-5
 ### Added
 *** LH - 10.06.17 ***
 Added Bootstrap and menubar and fleet page
+Added Flights page with it's controller and views
 
 ### Updated 
 *** LH - 10.06.17 ***
 welcome.php and template.php
+updated bootstrap version and added the flights page onto
+nav bar using config.php
+
