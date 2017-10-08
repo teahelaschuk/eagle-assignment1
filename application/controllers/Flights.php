@@ -10,6 +10,7 @@ class Flights extends Application
 	 */
 	public function index()
 	{
+
 		$this->data['pagebody'] = 'flights'; 
                 $this->data['pagetitle'] = 'BirdBrain - Flights';
                 
