@@ -23,7 +23,6 @@ class Application extends CI_Controller
 
 		//  Set basic view parameters
 		$this->data = array ();
-		$this->data['pagetitle'] = 'CodeIgniter3.1 Starter 2';
 		$this->data['ci_version'] = (ENVIRONMENT === 'development') ? 'CodeIgniter Version <strong>'.CI_VERSION.'</strong>' : '';
 	}
 
@@ -33,6 +32,10 @@ class Application extends CI_Controller
 	function render($template = 'template')
 	{
 		$this->data['content'] = $this->parser->parse($this->data['pagebody'], $this->data, true);
+                
+                // Build the menubar
+		$this->data['menubar'] = $this->parser->parse('_menubar', $this->config->item('menu_choices'), true);
+                
 		$this->parser->parse('template', $this->data);
 	}
 
