@@ -26,6 +26,12 @@ class FlightInfo extends CI_Model
         '8' => array('flightid' => 'E008', 'from' => 'Hudson Hope', 'to' => 'Dawson Creek', 'dep' => '14:00', 'arr' => '14:30', 'plane' => 'BB02'),
         '9' => array('flightid' => 'E009', 'from' => 'Fort St John', 'to' => 'Dawson Creek', 'dep' => '18:00', 'arr' => '18:25', 'plane' => 'BB03'),
     );
+    
+    var $data2 = array (
+      '1' => array('id' => 'YXJ', 'airport' => 'Fort St. John Airport (North Peace Airport)'),
+      '2' => array('id' => 'YNH', 'airport' => 'Hudson\'s Hope Airport'),
+      '3' => array('id' => 'YCQ', 'airport' => 'Chetwynd Airport'),
+    );
 
     public function __construct()
     {
@@ -49,6 +55,10 @@ class FlightInfo extends CI_Model
     public function all()
     {
         return $this->data;
+    }
+    
+    public function allAirports() {
+        return $this->data2;
     }
 
 }
