@@ -19,28 +19,22 @@ class Welcome extends Application {
     public function index() {
         $this->data['pagebody'] = 'welcome';
         $this->data['pagetitle'] = 'BirdBrain - Home';
+        
+        // load models needed
         $this->load->model('fleetInfo');
         $this->load->model('flightinfo');
 
+        // retrieve info from models
         $fleet = $this->fleetInfo->all();
         $flights = $this->flightinfo->all();
         $airports = $this->flightinfo->allAirports();
 
+        // save info to data
         $this->data['fleetNum'] = count($fleet);
         $this->data['flightsNum'] = count($flights);
         $this->data['baseAirport'] = reset($flights)['from'];
         $this->data['airports'] = $airports;
 
-        /*$arr = array();
-        foreach($flights as $val) {
-            array_push($arr, $val['from']);
-            
-        }
-        $arr = array_unique($arr);
-        
-        $this->data['airports'] = $arr['from'];
-        */
-        
         $this->render();
     }
 
