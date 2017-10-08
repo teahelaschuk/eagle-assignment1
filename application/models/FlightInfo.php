@@ -27,6 +27,7 @@ class FlightInfo extends CI_Model
         '9' => array('flightid' => 'E009', 'port1' => 'YXJ', 'port2' => 'YDQ', 'from' => 'Fort St John', 'to' => 'Dawson Creek', 'dep' => '18:00', 'arr' => '18:25', 'plane' => 'BB03'),
     );
     
+    /* Shows data of all airports */
     var $data2 = array (
       '1' => array('id' => 'YXJ', 'airport' => 'Fort St. John Airport (North Peace Airport)'),
       '2' => array('id' => 'YNH', 'airport' => 'Hudson\'s Hope Airport'),
@@ -51,12 +52,13 @@ class FlightInfo extends CI_Model
         return !isset($this->data[$which]) ? null : $this->data[$which];
     }
 
-    // retrieve all of the quotes
+    // retrieve all available flight info
     public function all()
     {
         return $this->data;
     }
     
+    // retrieve all airport info
     public function allAirports() {
         return $this->data2;
     }

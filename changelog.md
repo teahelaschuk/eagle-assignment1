@@ -52,6 +52,6 @@ Release Date: 2017-10-7
 ### Added
         
 ### Updated
-        - controllers/Welcome.php: added comments
-        - models/FlightInfo.php: added port1 and port2 for mouseover
+        - controllers/Welcome.php: added comments, fixed fleetinfo bug
+        - models/FlightInfo.php: added port1 and port2 for mouseover, added comments
         - views/flighs.php: added hover over flight number function
