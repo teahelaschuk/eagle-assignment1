@@ -65,4 +65,13 @@ Release Date: 2017-10-8
         - controllers/Flights.php: fixed the bug for real this time
 
 
+## *Version 1.0.7*
+### Added
+        - added planes.php to views and added information from plane (NM)
+### Updated
+        - controller/fleet.php added fleet tables and subcontroler for each plane (NM)
+        - views/fleet.php setup table to display fleet correctly (NM)
+        - config/routes.php corrected routes from fleet to allow each plane to be displayed (NM)
+        
+
 
