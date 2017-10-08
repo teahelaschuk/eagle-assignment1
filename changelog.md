@@ -42,6 +42,7 @@ Release Date: 2017-10-7
         - views/flights.php: created a table to display flight info (TE)
 
 ## *Version 1.0.4*
+Release Date: 2017-10-8
 ### Added
 
 ### Updated
@@ -52,6 +53,16 @@ Release Date: 2017-10-7
 ### Added
         
 ### Updated
-        - controllers/Welcome.php: added comments
-        - models/FlightInfo.php: added port1 and port2 for mouseover
+        - controllers/Welcome.php: added comments, fixed fleetinfo bug changed it to Info instead of info
+        - controllers/Flights.php: fixed flightinfo bug and changed 'info' to 'Info'
+        - models/FlightInfo.php: added port1 and port2 for mouseover, added comments
         - views/flighs.php: added hover over flight number function
+
+## *Version 1.0.6*
+### Added
+        
+### Updated
+        - controllers/Flights.php: fixed the bug for real this time
+
+
+
