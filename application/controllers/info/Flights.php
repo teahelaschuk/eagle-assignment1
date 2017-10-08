@@ -6,7 +6,7 @@
  * Time: 8:17 PM
  */
 
-class Fleet extends CI_Controller{
+class Flights extends CI_Controller{
 
     function __construct()
     {
@@ -14,8 +14,8 @@ class Fleet extends CI_Controller{
     }
 
     public function index (){
-        $this->load->model('fleetinfo');
-        $record = $this->fleetinfo->all();
+        $this->load->model('flightinfo');
+        $record = $this->flightinfo->all();
 
         header("Content-type: application/json");
         echo json_encode($record);

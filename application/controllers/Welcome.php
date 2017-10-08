@@ -19,10 +19,10 @@ class Welcome extends Application {
     public function index() {
         $this->data['pagebody'] = 'welcome';
         $this->data['pagetitle'] = 'BirdBrain - Home';
-        $this->load->model('fleets');
+        $this->load->model('fleetInfo');
         $this->load->model('flightinfo');
 
-        $fleet = $this->fleets->all();
+        $fleet = $this->fleetInfo->all();
         $flights = $this->flightinfo->all();
         $airports = $this->flightinfo->allAirports();
 
