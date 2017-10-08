@@ -13,7 +13,7 @@ class Flights extends Application
 		$this->data['pagebody'] = 'flights'; 
                 $this->data['pagetitle'] = 'BirdBrain - Flights';
                 
-                $this->load->model('flightinfo');       // load the model
+                $this->load->model('flightInfo');       // load the model
                 
                 $source = $this->flightinfo->all();     // get data
                 $this->data['schedule'] = $source;      // pass to be presented
