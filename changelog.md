@@ -54,7 +54,15 @@ Release Date: 2017-10-8
         
 ### Updated
         - controllers/Welcome.php: added comments, fixed fleetinfo bug changed it to Info instead of info
-        - views/Flights.php: fixed flightinfo bug and changed 'info' to 'Info'
+        - controllers/Flights.php: fixed flightinfo bug and changed 'info' to 'Info'
         - models/FlightInfo.php: added port1 and port2 for mouseover, added comments
         - views/flighs.php: added hover over flight number function
+
+## *Version 1.0.6*
+### Added
+        
+### Updated
+        - controllers/Flights.php: fixed the bug for real this time
+
+
 
