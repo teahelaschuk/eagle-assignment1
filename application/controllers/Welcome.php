@@ -21,7 +21,7 @@ class Welcome extends Application {
         $this->data['pagetitle'] = 'BirdBrain - Home';
         
         // load models needed
-        $this->load->model('fleetInfo');
+        $this->load->model('fleetinfo');
         $this->load->model('flightinfo');
 
         // retrieve info from models
