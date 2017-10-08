@@ -11,7 +11,7 @@ function __autoload($class_name) {
     require_once $class_name . '.php';
 }
 
-$vars = new Fleet();
+$vars = new Fleets();
 
 class FlightInfo extends CI_Model
 {
