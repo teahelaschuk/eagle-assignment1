@@ -48,3 +48,10 @@ Release Date: 2017-10-7
         - controllers/FlightInfo.php: added data2 to pass in the connecting airports (LH)
         - views/welcome.php: displayed airline info (LH)
 
+## *Version 1.0.5*
+### Added
+        
+### Updated
+        - controllers/Welcome.php: added comments
+        - models/FlightInfo.php: added port1 and port2 for mouseover
+        - views/flighs.php: added hover over flight number function
