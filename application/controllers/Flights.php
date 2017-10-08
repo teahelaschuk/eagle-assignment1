@@ -15,7 +15,7 @@ class Flights extends Application
                 
                 $this->load->model('flightInfo');       // load the model
                 
-                $source = $this->flightinfo->all();     // get data
+                $source = $this->flightInfo->all();     // get data
                 $this->data['schedule'] = $source;      // pass to be presented
                 
 		$this->render(); 
