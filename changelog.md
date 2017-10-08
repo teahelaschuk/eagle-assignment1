@@ -15,15 +15,12 @@ Release Date: 2017-10-5
 ## *Version 1.0.1*
 Release Date: 2017-10-5
 ### Added
-*** LH - 10.06.17 ***
-Added Bootstrap and menubar and fleet page
-Added Flights page with it's controller and views
-
+        - Added Bootstrap and menubar and fleet page (LH)
+        - Added Flights page with it's controller and views (LH)
 ### Updated 
-*** LH - 10.06.17 ***
-welcome.php and template.php
-updated bootstrap version and added the flights page onto
-nav bar using config.php
+        - welcome.php and template.php (LH)
+        - updated bootstrap version and added the flights page onto (LH)
+        - nav bar using config.php (LH)
 
 ## *Version 1.0.2*
 Release Date: 2017-10-5
@@ -43,4 +40,11 @@ Release Date: 2017-10-7
         - models/Flights.php: changed file name to FlightInfo to fix a naming conflict (TE)
         - controllers/Flights.php: loaded model data and passed to view (TE)
         - views/flights.php: created a table to display flight info (TE)
+
+## *Version 1.0.4*
+### Added
+
+### Updated
+        - controllers/FlightInfo.php: added data2 to pass in the connecting airports (LH)
+        - views/welcome.php: displayed airline info (LH)
 
