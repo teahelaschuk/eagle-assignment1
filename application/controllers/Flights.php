@@ -4,23 +4,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Flights extends Application
 {
-
 	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/
-	 * 	- or -
-	 * 		http://example.com/welcome/index
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
+	 * Index Page for the Flights controller.
+	 * TE
 	 */
 	public function index()
 	{
 		$this->data['pagebody'] = 'flights'; 
                 $this->data['pagetitle'] = 'BirdBrain - Flights';
+                
+                $this->load->model('flightinfo');       // load the model
+                
+                $source = $this->flightinfo->all();     // get data
+                $this->data['schedule'] = $source;      // pass to be presented
+                
 		$this->render(); 
 	}
 
