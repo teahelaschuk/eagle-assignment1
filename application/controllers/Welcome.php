@@ -21,13 +21,13 @@ class Welcome extends Application {
         $this->data['pagetitle'] = 'BirdBrain - Home';
         
         // load models needed
-        $this->load->model('fleetinfo');
-        $this->load->model('flightinfo');
+        $this->load->model('fleetInfo');
+        $this->load->model('flightInfo');
 
         // retrieve info from models
-        $fleet = $this->fleetinfo->all();
-        $flights = $this->flightinfo->all();
-        $airports = $this->flightinfo->allAirports();
+        $fleet = $this->fleetInfo->all();
+        $flights = $this->flightInfo->all();
+        $airports = $this->flightInfo->allAirports();
 
         // save info to data
         $this->data['fleetNum'] = count($fleet);
