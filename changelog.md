@@ -33,3 +33,14 @@ Release Date: 2017-10-5
 	- created model Flights (NM)
 ### Updated 
 
+
+## *Version 1.0.3*
+Release Date: 2017-10-7
+
+### Added
+
+### Updated
+        - models/Flights.php: changed file name to FlightInfo to fix a naming conflict (TE)
+        - controllers/Flights.php: loaded model data and passed to view (TE)
+        - views/flights.php: created a table to display flight info (TE)
+
