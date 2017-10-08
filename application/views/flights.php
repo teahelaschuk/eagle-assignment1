@@ -2,6 +2,8 @@
      TE 
 -->
 <div id="body">
+    <h3>Schedule</h3>
+    <p>Hover over flight number for more information</p>
     <table class="table table-striped">
         <thead>
             <tr>
@@ -18,7 +20,7 @@
             {schedule}
             <tr>
                 <!-- table content taken from FlightInfo model -->
-                <td>{flightid}</td>
+                <td data-toggle="tooltip" data-placement="top" title="{port1} - {port2}">{flightid}</td>
                 <td>{to}</td>
                 <td>{from}</td>
                 <td>{dep}</td>

@@ -16,15 +16,15 @@ $vars = new FleetInfo();
 class FlightInfo extends CI_Model
 {
     var $data = array(
-        '1' => array('flightid' => 'E001', 'from' => 'Dawson Creek', 'to' => 'Hudson Hope', 'dep' => '8:00', 'arr' => '8:23', 'plane' => 'BB01' ),
-        '2' => array('flightid' => 'E002', 'from' => 'Dawson Creek', 'to' => 'Fort St John', 'dep' => '8:00', 'arr' => '8:20', 'plane' => 'BB02'),
-        '3' => array('flightid' => 'E003', 'from' => 'Dawson Creek', 'to' => 'Chetwynd', 'dep' => '8:00', 'arr' => '8:30', 'plane' => 'BB03'),
-        '4' => array('flightid' => 'E004', 'from' => 'Hudson Hope', 'to' => 'Chetwynd', 'dep' => '10:00', 'arr' => '10:16', 'plane' => 'BB01'),
-        '5' => array('flightid' => 'E005', 'from' => 'Fort St John', 'to' => 'Hudson Hope', 'dep' => '12:00', 'arr' => '12:22', 'plane' => 'BB02'),
-        '6' => array('flightid' => 'E006', 'from' => 'Chetwynd', 'to' => 'Fort St John', 'dep' => '15:00', 'arr' => '15:33', 'plane' => 'BB03'),
-        '7' => array('flightid' => 'E007', 'from' => 'Chetwynd', 'to' => 'Dawson Creek', 'dep' => '13:00', 'arr' => '13:19', 'plane' => 'BB01'),
-        '8' => array('flightid' => 'E008', 'from' => 'Hudson Hope', 'to' => 'Dawson Creek', 'dep' => '14:00', 'arr' => '14:30', 'plane' => 'BB02'),
-        '9' => array('flightid' => 'E009', 'from' => 'Fort St John', 'to' => 'Dawson Creek', 'dep' => '18:00', 'arr' => '18:25', 'plane' => 'BB03'),
+        '1' => array('flightid' => 'E001', 'port1' => 'YDQ', 'port2' => 'YNH', 'from' => 'Dawson Creek', 'to' => 'Hudson Hope', 'dep' => '8:00', 'arr' => '8:23', 'plane' => 'BB01' ),
+        '2' => array('flightid' => 'E002', 'port1' => 'YDQ', 'port2' => 'YXJ', 'from' => 'Dawson Creek', 'to' => 'Fort St John', 'dep' => '8:00', 'arr' => '8:20', 'plane' => 'BB02'),
+        '3' => array('flightid' => 'E003', 'port1' => 'YDQ', 'port2' => 'YCQ', 'from' => 'Dawson Creek', 'to' => 'Chetwynd', 'dep' => '8:00', 'arr' => '8:30', 'plane' => 'BB03'),
+        '4' => array('flightid' => 'E004', 'port1' => 'YNH', 'port2' => 'YCQ', 'from' => 'Hudson Hope', 'to' => 'Chetwynd', 'dep' => '10:00', 'arr' => '10:16', 'plane' => 'BB01'),
+        '5' => array('flightid' => 'E005', 'port1' => 'YXJ', 'port2' => 'YNH', 'from' => 'Fort St John', 'to' => 'Hudson Hope', 'dep' => '12:00', 'arr' => '12:22', 'plane' => 'BB02'),
+        '6' => array('flightid' => 'E006', 'port1' => 'YCQ', 'port2' => 'YXJ', 'from' => 'Chetwynd', 'to' => 'Fort St John', 'dep' => '15:00', 'arr' => '15:33', 'plane' => 'BB03'),
+        '7' => array('flightid' => 'E007', 'port1' => 'YCQ', 'port2' => 'YDQ', 'from' => 'Chetwynd', 'to' => 'Dawson Creek', 'dep' => '13:00', 'arr' => '13:19', 'plane' => 'BB01'),
+        '8' => array('flightid' => 'E008', 'port1' => 'YNH', 'port2' => 'YDQ', 'from' => 'Hudson Hope', 'to' => 'Dawson Creek', 'dep' => '14:00', 'arr' => '14:30', 'plane' => 'BB02'),
+        '9' => array('flightid' => 'E009', 'port1' => 'YXJ', 'port2' => 'YDQ', 'from' => 'Fort St John', 'to' => 'Dawson Creek', 'dep' => '18:00', 'arr' => '18:25', 'plane' => 'BB03'),
     );
     
     var $data2 = array (
