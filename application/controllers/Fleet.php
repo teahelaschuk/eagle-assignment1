@@ -19,12 +19,13 @@ class Fleet extends Application
 	 */
 	public function index()
 	{
+        // this is the view we want shown
         $this->data['pagebody'] = 'fleet';
         $this->data['pagetitle'] = 'BirdBrain - Fleet';
 
-        $this->load->model('fleetinfo');       // load the model
+        $this->load->model('fleetInfo');       // load the model
 
-        $source = $this->fleetinfo->all();     // get data
+        $source = $this->fleetInfo->all();     // get data
         $this->data['planes'] = $source;      // pass to be presented
 
         $this->render();
@@ -33,14 +34,11 @@ class Fleet extends Application
     {
         // this is the view we want shown
         $this->data['pagebody'] = 'fleet';
-        $this->load->model('fleetinfo');
-        // build the list of authors, to pass on to our view
-        $source = $this->fleetinfo->get($key);
+        $this->load->model('fleetInfo');
+        // build the list of planes, to pass on to our view
+        $source = $this->fleetInfo->get($key);
 
-        // pass on the data to present, as the "authors" view parameter
-        //$this->data['authors'] = $source;
-
-        // pass on the data to present, adding the author record's fields
+        // pass on the data to present, adding the planes info fields
         $this->data = array_merge($this->data, (array) $source);
 
         $this->data['pagebody'] = 'planes';

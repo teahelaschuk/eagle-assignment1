@@ -15,6 +15,9 @@ $vars = new FleetInfo();
 
 class FlightInfo extends CI_Model
 {
+    /*
+     * shows data of all flights
+     */
     var $data = array(
         '1' => array('flightid' => 'E001', 'port1' => 'YDQ', 'port2' => 'YNH', 'from' => 'Dawson Creek', 'to' => 'Hudson Hope', 'dep' => '8:00', 'arr' => '8:23', 'plane' => 'BB01' ),
         '2' => array('flightid' => 'E002', 'port1' => 'YDQ', 'port2' => 'YXJ', 'from' => 'Dawson Creek', 'to' => 'Fort St John', 'dep' => '8:00', 'arr' => '8:20', 'plane' => 'BB02'),
@@ -46,7 +49,7 @@ class FlightInfo extends CI_Model
         }
     }
 
-    // retrieve a single quote, null if not found
+    // retrieve a single flight, null if not found
     public function get($which)
     {
         return !isset($this->data[$which]) ? null : $this->data[$which];

@@ -73,5 +73,11 @@ Release Date: 2017-10-8
         - views/fleet.php setup table to display fleet correctly (NM)
         - config/routes.php corrected routes from fleet to allow each plane to be displayed (NM)
         
-
-
+## *Version 1.0.8*
+### Added
+        
+### Updated
+        - models/FleetInfo added more information (NM)
+        - views/planes.php setup table to display planes correctly (NM)
+        - controller/Fleet Fixed and error (NM)
+      
