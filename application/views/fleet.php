@@ -10,8 +10,29 @@
 	<p>If you are exploring CodeIgniter for the very first time, you should 
 		start by reading the <a href="http://www.codeigniter.com/user_guide/">User Guide</a>.</p>
         -->
-        
-        <p>test2</p>
-        
+
+        <h3>Planes</h3>
+        <p>Select a plane for more </p>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <!-- table headers -->
+                <td><b>Planes</b></td>
+            </tr>
+            </thead>
+            <tbody>
+            {planes}
+            <tr>
+                <!-- table content taken from FlightInfo model -->
+                <td>
+                    <a href="/fleet/{name}">
+                        {name}
+                    </a>
+                </td>
+
+            </tr>
+            {/planes}
+            </tbody>
+        </table>
         
 </div>

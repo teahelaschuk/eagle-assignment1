@@ -19,9 +19,33 @@ class Fleet extends Application
 	 */
 	public function index()
 	{
-		$this->data['pagebody'] = 'fleet'; 
-                $this->data['pagetitle'] = 'BirdBrain - Fleet';
-		$this->render(); 
-	}
+        $this->data['pagebody'] = 'fleet';
+        $this->data['pagetitle'] = 'BirdBrain - Fleet';
+
+        $this->load->model('fleetinfo');       // load the model
+
+        $source = $this->fleetinfo->all();     // get data
+        $this->data['planes'] = $source;      // pass to be presented
+
+        $this->render();
+    }
+    public function show($key)
+    {
+        // this is the view we want shown
+        $this->data['pagebody'] = 'fleet';
+        $this->load->model('fleetinfo');
+        // build the list of authors, to pass on to our view
+        $source = $this->fleetinfo->get($key);
+
+        // pass on the data to present, as the "authors" view parameter
+        //$this->data['authors'] = $source;
+
+        // pass on the data to present, adding the author record's fields
+        $this->data = array_merge($this->data, (array) $source);
+
+        $this->data['pagebody'] = 'planes';
+
+        $this->render();
+    }
 
 }

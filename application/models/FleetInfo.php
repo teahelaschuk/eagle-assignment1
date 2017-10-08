@@ -10,7 +10,7 @@ class FleetInfo extends CI_Model
     var $data = array(
         '1' => array('airid' => 'BB01', 'name' => 'citation'),
         '2' => array('airid' => 'BB02', 'name' => 'kingair'),
-        '3' => array('airid' => 'BB03', 'name' => 'citation')
+        '3' => array('airid' => 'BB03', 'name' => 'caravan')
     );
 
         // Constructor
