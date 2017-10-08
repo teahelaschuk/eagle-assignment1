@@ -20,7 +20,7 @@ class Fleet extends Application
 	public function index()
 	{
 		$this->data['pagebody'] = 'fleet'; 
-                $this->data['pagetitle'] = 'BirdBrain - Fleets';
+                $this->data['pagetitle'] = 'BirdBrain - Fleet';
 		$this->render(); 
 	}
 

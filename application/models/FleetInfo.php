@@ -5,7 +5,7 @@
  * Date: 2017-10-05
  * Time: 3:41 PM
  */
-class Fleet extends CI_Model
+class FleetInfo extends CI_Model
 {
     var $data = array(
         '1' => array('airid' => 'BB01', 'name' => 'citation'),
