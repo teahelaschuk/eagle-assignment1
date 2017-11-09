@@ -29,8 +29,7 @@ Release Date: 2017-10-5
 	- created model Fleet (NM)
 	- created model Flights (NM)
 ### Updated 
-        - Info/Fleet.php changed model to reference fleetInfo instead of fleetinfo
-        - Info/Flights.php changed model to reference flightInfo instead of flightinfo
+
 
 
 ## *Version 1.0.3*
@@ -82,4 +81,16 @@ Release Date: 2017-10-8
         - models/FleetInfo added more information (NM)
         - views/planes.php setup table to display planes correctly (NM)
         - controller/Fleet Fixed and error (NM)
-      
+        
+## *Version 2.0.1*
+### Added   
+     
+### Updated 
+        - Info/Fleet.php changed model to reference fleetInfo instead of fleetinfo (LH)
+        - Info/Flights.php changed model to reference flightInfo instead of flightinfo (LH)
+
+## *Version 2.0.2*
+### Added   
+     
+### Updated 
+        - views/flights.php changes from to to fixing the previous error (NM)
