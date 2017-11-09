@@ -21,8 +21,8 @@
             <tr>
                 <!-- table content taken from FlightInfo model -->
                 <td data-toggle="tooltip" data-placement="top" title="{port1} - {port2}">{flightid}</td>
-                <td>{to}</td>
                 <td>{from}</td>
+                <td>{to}</td>
                 <td>{dep}</td>
                 <td>{arr}</td>
                 <td>{plane}</td>
