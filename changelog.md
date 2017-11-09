@@ -29,6 +29,8 @@ Release Date: 2017-10-5
 	- created model Fleet (NM)
 	- created model Flights (NM)
 ### Updated 
+        - Info/Fleet.php changed model to reference fleetInfo instead of fleetinfo
+        - Info/Flights.php changed model to reference flightInfo instead of flightinfo
 
 
 ## *Version 1.0.3*

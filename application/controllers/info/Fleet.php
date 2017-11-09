@@ -1,9 +1,7 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: kimdongwon
- * Date: 2017-09-28
- * Time: 8:17 PM
+ * User: lanceleih
+ * Fleet controller for info/fleet
  */
 
 class Fleet extends CI_Controller{
@@ -14,8 +12,8 @@ class Fleet extends CI_Controller{
     }
 
     public function index (){
-        $this->load->model('fleetinfo');
-        $record = $this->fleetinfo->all();
+        $this->load->model('fleetInfo');
+        $record = $this->fleetInfo->all();
 
         header("Content-type: application/json");
         echo json_encode($record);
