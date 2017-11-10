@@ -79,6 +79,7 @@ Release Date: 2017-10-8
         - Added tests folder. Has Bootstrap index file and PlanesTest
         - Added Entity controller into core
         - Made Entity model load before everything else
+        - Added travis.yml
         
 ### Updated
         - models/FleetInfo added more information (NM)
