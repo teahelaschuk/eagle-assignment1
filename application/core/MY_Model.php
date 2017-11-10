@@ -478,4 +478,6 @@ class MY_Model2 extends MY_Model {
 
 }
 
+include_once 'Entity.php';
+
 /* End of file */
