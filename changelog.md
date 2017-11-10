@@ -94,3 +94,25 @@ Release Date: 2017-10-8
      
 ### Updated 
         - views/flights.php changes from to to fixing the previous error (NM)
+
+## *Version 2.0.3* 
+Release Date: 11/9/2017
+TE
+
+### Added
+    - controllers/Roles.php: created controller with an actor() method to store the role after it is selected in the drop down menu
+    - /tmp: created folder for storing sessions
+    - libraries/parsedown.php: added library
+
+### Updated
+    - gitignored the .idea file
+    - app/config/constants.php: added user role constants 
+    - views/_menubar.php: added dropdown menu to navbar for selecting roles, displays role if set
+    - app/config/autoload.php, config/config.php: enabled sessions
+
+## *Version 2.0.4* 
+Release Date: 11/9/2017
+TE
+
+### Updated
+    - fixed tmp folder and git ignore
