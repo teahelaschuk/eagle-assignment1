@@ -6,4 +6,5 @@
 !*/cache/.htaccess
 /nbproject/private/
 /.idea/
-/tmp/
+*/tmp/
+!*/tmp/readme.txt

@@ -109,3 +109,10 @@ TE
     - app/config/constants.php: added user role constants 
     - views/_menubar.php: added dropdown menu to navbar for selecting roles, displays role if set
     - app/config/autoload.php, config/config.php: enabled sessions
+
+## *Version 2.0.4* 
+Release Date: 11/9/2017
+TE
+
+### Updated
+    - fixed tmp folder and git ignore
