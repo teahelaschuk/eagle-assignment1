@@ -1,6 +1,6 @@
 #Change Log
 
-Team membership:  Teah Elaschuk (Captain) &  Nathan Miles & Lancelei Herradura
+Team membership:  Lancelei Herradura (Captain) &  Nathan Miles & Teah Elaschuk
 Team conventions: Allman notation, markdown for changelog
 Changelog format: [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
@@ -104,19 +104,44 @@ Release Date: 11/9/2017
 TE
 
 ### Added
-    - controllers/Roles.php: created controller with an actor() method to store the role after it is selected in the drop down menu
-    - /tmp: created folder for storing sessions
-    - libraries/parsedown.php: added library
 
+    Controllers
+        - controllers/Roles.php: created controller with an actor() method to store the role after it is selected in the drop down menu
+    
+    Models
+        - Added Flight Entity Model
+
+    Views
+
+    Config
+        - libraries/parsedown.php: added library
+        - /tmp: created folder for storing sessions
+
+    Tests
+        - Added FlightTest
+        - Added .travis.yml for Travis-CI
+
+    Core
+    
 ### Updated
-    - gitignored the .idea file
-    - app/config/constants.php: added user role constants 
-    - views/_menubar.php: added dropdown menu to navbar for selecting roles, displays role if set
-    - app/config/autoload.php, config/config.php: enabled sessions
+    
+    Controllers
 
-## *Version 2.0.4* 
-Release Date: 11/9/2017
-TE
+    Models
+        - Renamed Planes entity model to Plane
 
-### Updated
-    - fixed tmp folder and git ignore
+    Views
+        - views/_menubar.php: added dropdown menu to navbar for selecting roles, displays role if set
+
+    Config
+        - app/config/autoload.php, config/config.php: enabled sessions
+    
+    Tests
+        - Renamed PlanesTest to PlaneTest
+
+    Core
+        - gitignored the .idea file
+        - app/config/constants.php: added user role constants 
+        - fixed tmp folder and git ignore
+
+
