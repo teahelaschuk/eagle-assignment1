@@ -132,6 +132,7 @@ TE
 
     Views
         - views/_menubar.php: added dropdown menu to navbar for selecting roles, displays role if set
+        - Made tooltip look pretty for each flight number
 
     Config
         - app/config/autoload.php, config/config.php: enabled sessions
