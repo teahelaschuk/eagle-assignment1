@@ -34,7 +34,11 @@ class Welcome extends Application {
         $this->data['flightsNum'] = count($flights);
         $this->data['baseAirport'] = reset($flights)['from'];
         $this->data['airports'] = $airports;
-
+        
+        // set default user role 
+        if(isset($_SESSION['userrole']) && !empty($_SESSION['userrole'])) {
+            $this->session->userdata(ROLE_GUEST);
+        }
         $this->render();
     }
 

@@ -101,12 +101,11 @@ Release Date: 2017-10-8
 
 ## *Version 2.0.3* 
 Release Date: 11/9/2017
-TE
 
 ### Added
 
     Controllers
-        - controllers/Roles.php: created controller with an actor() method to store the role after it is selected in the drop down menu
+        - controllers/Roles.php: created controller with an actor() method to store the role after it is selected in the drop down menu (TE)
     
     Models
         - Added Flight Entity Model
@@ -114,8 +113,8 @@ TE
     Views
 
     Config
-        - libraries/parsedown.php: added library
-        - /tmp: created folder for storing sessions
+        - libraries/parsedown.php: added library (TE)
+        - /tmp: created folder for storing sessions (TE)
 
     Tests
         - Added FlightTest
@@ -131,18 +130,26 @@ TE
         - Renamed Planes entity model to Plane
 
     Views
-        - views/_menubar.php: added dropdown menu to navbar for selecting roles, displays role if set
+        - views/_menubar.php: added dropdown menu to navbar for selecting roles, displays role if set (TE)
         - Made tooltip look pretty for each flight number
 
     Config
-        - app/config/autoload.php, config/config.php: enabled sessions
+        - app/config/autoload.php, config/config.php: enabled sessions (TE)
     
     Tests
         - Renamed PlanesTest to PlaneTest
 
     Core
-        - gitignored the .idea file
-        - app/config/constants.php: added user role constants 
-        - fixed tmp folder and git ignore
+        - gitignored the .idea file (TE)
+        - app/config/constants.php: added user role constants (TE)
+        - fixed tmp folder and git ignore (TE)
 
+## *Version 2.0.4* 
+Release Date: 11/12/2017
+
+## Updated
+ - fixed my (TE) bad code from last day, i.e.
+    - removed PHP from _menubar.php view
+    - added user role data to put into the menu bar config/config.php, removed hard coded data
+    - renamed the Actor function in controllers/Roles.php to (the more appropriately named) User_Role
 
