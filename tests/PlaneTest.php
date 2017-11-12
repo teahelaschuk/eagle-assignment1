@@ -22,25 +22,25 @@ class PlaneTest extends TestCase {
       $this->CI = &get_instance();
     }
     
-    public function testPlanes() {
-        $this->CI->load->model('planes');
+    public function testPlane() {
+        $this->CI->load->model('plane');
         
-        $this->CI->planes->planes = "caravan";
-        $this->CI->planes->planes = "asd";
-        $this->CI->planes->planes = "citation";
-        $this->CI->planes->planes = "kingair";
-        $this->CI->planes->planes = "testplane";
+        $this->CI->plane->planes = "caravan";
+        $this->CI->plane->planes = "asd";
+        $this->CI->plane->planes = "citation";
+        $this->CI->plane->planes = "kingair";
+        $this->CI->plane->planes = "testplane";
         
         // BirdBrain owns caravan model
-        $this->assertContains("caravan", $this->CI->planes->planes);
+        $this->assertContains("caravan", $this->CI->plane->planes);
         
         // Not part of BirdBrain airlines
-        $this->assertNotContains("asd", $this->CI->planes->planes);
-        $this->assertContains("citation", $this->CI->planes->planes);
-        $this->assertContains("kingair", $this->CI->planes->planes);
+        $this->assertNotContains("asd", $this->CI->plane->planes);
+        $this->assertContains("citation", $this->CI->plane->planes);
+        $this->assertContains("kingair", $this->CI->plane->planes);
         
         // Check that there is not enough budget to get testplane
-        $this->assertNotContains("testplane", $this->CI->planes->planes);
+        $this->assertNotContains("testplane", $this->CI->plane->planes);
         
     }
     

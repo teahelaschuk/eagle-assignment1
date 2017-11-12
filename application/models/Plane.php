@@ -11,11 +11,10 @@
  *
  * @author Lancelei
  */
-class Planes extends Entity {
+class Plane extends Entity {
     
     private $planes = array("test");
     private $fleetValue = 10000;
-    private $price;
     
     public function __construct() {
         parent::__construct();
