@@ -250,5 +250,18 @@ Release Date: 11/12/2017
     Core
     
     Data
-        
+
+## *Version 2.0.8* 
+Release Date: 11/12/2017
+
+### Added
+    Views:
+        - booking.php: form layout (TE)    
+    Controllers:
+        - Booking.php: displays booking, still needs work (TE)
+    
+### Updated            
+    Config:
+        - added Booking to menu bar     (TE)    
+
    

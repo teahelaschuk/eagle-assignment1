@@ -37,8 +37,9 @@ class Welcome extends Application {
         
         // set default user role 
         if(isset($_SESSION['userrole']) && !empty($_SESSION['userrole'])) {
-            $this->session->userdata(ROLE_GUEST);
+            $this->session->set_userdata('userrole', ROLE_GUEST);
         }
+        
         $this->render();
     }
 
