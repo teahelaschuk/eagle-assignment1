@@ -37,12 +37,9 @@ class Fleet extends Application
         $this->load->model('fleetInfo');
         // build the list of planes, to pass on to our view
         $source = $this->fleetInfo->get($key);
-        $method ='https://wacky.jlparry.com/info/airplanes/'.$source->name;
-        print($method);
-        $response = file_get_contents($method);
-        $tmp = (object) json_decode($response);
+
         // pass on the data to present, adding the planes info fields
-        $this->data = array_merge($this->data, (array) $tmp);
+        $this->data = array_merge($this->data, (array) $source);
 
         $this->data['pagebody'] = 'planes';
 
