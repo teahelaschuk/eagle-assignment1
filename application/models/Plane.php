@@ -28,8 +28,7 @@ class Plane extends Entity {
     public function setPlanes($fleet) {
         $value = 0;
         $futureValue = $this->budget;
-        echo "FUTURE: " . $futureValue;
-        echo "Budget: " . $this->budget;
+        
         foreach($fleet as $plane) {
             $id = $plane->airid;
             if($id === "citation" || $id === "kingair" || $id === "caravan") {
