@@ -263,5 +263,40 @@ Release Date: 11/12/2017
 ### Updated            
     Config:
         - added Booking to menu bar     (TE)    
+        
+      
 
+   ## *Version 2.0.9* 
+   Release Date: 11/12/2017
    
+   ### Added
+   
+       Core
+   
+       Data
+       
+       Models
+        -Airportinfo added to help with CSV files (NM)
+   
+   
+       
+   ### Updated
+       
+       Controllers
+        - Fleet fixed data structure (NM)
+        - Flights fixed data structure (NM)
+        - Welcome fixed data structure (NM)   
+   
+       Models
+           -flightinfo fixed data structure (NM)
+   
+       Views
+   
+       Config
+           
+       
+       Tests
+   
+       Core
+       
+       Data
