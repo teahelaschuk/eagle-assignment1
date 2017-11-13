@@ -7,9 +7,9 @@
  */
 
 // Messes up with the phpunit. Remove comments only when local.
-//function __autoload($class_name) {
-//    require_once $class_name . '.php';
-//}
+function __autoload($class_name) {
+    require_once $class_name . '.php';
+}
 
 $vars = new FleetInfo();
 
@@ -35,6 +35,13 @@ class FlightInfo extends CI_Model
       '1' => array('id' => 'YXJ', 'airport' => 'Fort St. John Airport (North Peace Airport)'),
       '2' => array('id' => 'YNH', 'airport' => 'Hudson\'s Hope Airport'),
       '3' => array('id' => 'YCQ', 'airport' => 'Chetwynd Airport'),
+    );
+    
+    var $data3 = array (
+        '0' => array('name' => 'Dawson Creek'),
+        '1' => array('name' => 'Fort St. John'),
+        '2' => array('name' => 'Hudson Hope'),
+        '3' => array ('name' => 'Chetwynd')
     );
 
     public function __construct()
@@ -64,6 +71,11 @@ class FlightInfo extends CI_Model
     // retrieve all airport info
     public function allAirports() {
         return $this->data2;
+    }
+    
+    // retrieve all cities
+    public function allCities() {
+        return $this->data3;
     }
 
 }
