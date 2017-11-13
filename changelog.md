@@ -1,6 +1,6 @@
 #Change Log
 
-Team membership:  Teah Elaschuk (Captain) &  Nathan Miles & Lancelei Herradura
+Team membership:  Lancelei Herradura (Captain) &  Nathan Miles & Teah Elaschuk
 Team conventions: Allman notation, markdown for changelog
 Changelog format: [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
@@ -76,6 +76,10 @@ Release Date: 2017-10-8
         
 ## *Version 1.0.8*
 ### Added
+        - Added tests folder. Has Bootstrap index file and PlanesTest
+        - Added Entity controller into core
+        - Made Entity model load before everything else
+        - Added travis.yml
         
 ### Updated
         - models/FleetInfo added more information (NM)
@@ -94,3 +98,206 @@ Release Date: 2017-10-8
      
 ### Updated 
         - views/flights.php changes from to to fixing the previous error (NM)
+
+## *Version 2.0.3* 
+Release Date: 11/9/2017
+
+### Added
+
+    Controllers
+        - controllers/Roles.php: created controller with an actor() method to store the role after it is selected in the drop down menu (TE)
+    
+    Models
+        - Added Flight Entity Model
+
+    Views
+
+    Config
+        - libraries/parsedown.php: added library (TE)
+        - /tmp: created folder for storing sessions (TE)
+
+    Tests
+        - Added FlightTest
+        - Added .travis.yml for Travis-CI
+
+    Core
+    
+### Updated
+    
+    Controllers
+
+    Models
+        - Renamed Planes entity model to Plane
+
+    Views
+        - views/_menubar.php: added dropdown menu to navbar for selecting roles, displays role if set (TE)
+
+    Config
+        - app/config/autoload.php, config/config.php: enabled sessions (TE)
+    
+    Tests
+        - Renamed PlanesTest to PlaneTest
+
+    Core
+        - gitignored the .idea file (TE)
+        - app/config/constants.php: added user role constants (TE)
+        - fixed tmp folder and git ignore (TE)
+
+## *Version 2.0.4* 
+Release Date: 11/12/2017
+
+## Updated
+ - fixed my (TE) bad code from last day, i.e.
+    - removed PHP from _menubar.php view
+    - added user role data to put into the menu bar config/config.php, removed hard coded data
+    - renamed the Actor function in controllers/Roles.php to (the more appropriately named) User_Role
+
+## *Version 2.0.5* 
+Release Date: 11/12/2017
+
+### Added
+
+    Core
+        - Added CSV_Model (NM)
+        - Added DataMapper (NM)
+        - Added Memory_Model (NM)
+    Data
+        - airplanes (NM)
+        - airports (NM)
+        - flights (NM)
+
+    
+### Updated
+    
+    Controllers
+        - Fleet allowed code to lookup Wacky data and access the new data from CSV (NM)
+
+    Models
+        - FleetInfo changed the way the class functioned to pull in CSV data (NM)
+
+    Views
+        - fleet added ways to access new csv data (NM)
+        - planes added ways to access new wacky data (NM)
+    Config
+        - routes updated routes to perform successful with new data (NM)
+    
+    Tests
+
+
+    Core
+        - My_Model added new models to be pulled in (NM)
+        
+## *Version 2.0.6* 
+Release Date: 11/12/2017
+
+### Added
+
+    Core
+
+    Data
+
+
+    
+### Updated
+    
+    Controllers
+        - Fleet changed to not have access to wacky server (NM)
+
+    Models
+        - FleetInfo added get get function and added wacky server lookup there (NM)
+
+    Views
+        - updated the id change (NM)
+        - updated the id change (NM)
+    Config
+        - routes updated routes to perform successful with new data (NM)
+    
+    Tests
+
+
+    Core
+    
+    Data
+        - airplanes added correct id information (NM)
+
+## *Version 2.0.7* 
+Release Date: 11/12/2017
+
+### Added
+
+    Core
+
+    Data
+
+
+    
+### Updated
+    
+    Controllers
+        
+
+    Models
+        - Plane has setter to check if our plane data is valid
+
+    Views
+
+    Config
+        
+    
+    Tests
+        - Uses plane entity model to check if all our plane data is valid
+
+    Core
+    
+    Data
+
+## *Version 2.0.8* 
+Release Date: 11/12/2017
+
+### Added
+    Views:
+        - booking.php: form layout (TE)    
+    Controllers:
+        - Booking.php: displays booking, still needs work (TE)
+    
+### Updated            
+    Config:
+        - added Booking to menu bar     (TE)    
+        
+      
+
+   ## *Version 2.0.9* 
+   Release Date: 11/12/2017
+   
+   ### Added
+   
+       Core
+   
+       Data
+       
+       Models
+        -Airportinfo added to help with CSV files (NM)
+   
+   
+       
+   ### Updated
+       
+       Controllers
+        - Fleet fixed data structure (NM)
+        - Flights fixed data structure (NM)
+        - Welcome fixed data structure (NM)   
+   
+       Models
+           -flightinfo fixed data structure (NM)
+           - got rid of that pesky autoload function inside flightInfo (LH)
+   
+       Views
+   
+       Config
+           
+       
+       Tests
+   
+       Core
+       
+       Data
