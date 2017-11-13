@@ -219,4 +219,49 @@ Release Date: 11/12/2017
     
     Data
         - airplanes added correct id information (NM)
+
+## *Version 2.0.7* 
+Release Date: 11/12/2017
+
+### Added
+
+    Core
+
+    Data
+
+
+    
+### Updated
+    
+    Controllers
+        
+
+    Models
+        - Plane has setter to check if our plane data is valid
+
+    Views
+
+    Config
+        
+    
+    Tests
+        - Uses plane entity model to check if all our plane data is valid
+
+    Core
+    
+    Data
+
+## *Version 2.0.8* 
+Release Date: 11/12/2017
+
+### Added
+    Views:
+        - booking.php: form layout (TE)    
+    Controllers:
+        - Booking.php: displays booking, still needs work (TE)
+    
+### Updated            
+    Config:
+        - added Booking to menu bar     (TE)    
+
    
