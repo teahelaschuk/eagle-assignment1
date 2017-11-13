@@ -13,48 +13,61 @@
  */
 class Plane extends Entity {
     
-    private $planes = array("test");
-    private $fleetValue = 10000;
+    private $planes = array();
+    private $budget;
     
     public function __construct() {
         parent::__construct();
     }
     
-    public function setPlanes($kind) {
+    /**
+     * Test if all the planes are valid and under the budget
+     * @param type $fleet
+     * @author Lancelei Herradura
+     */
+    public function setPlanes($fleet) {
         $value = 0;
-        $futureBudget = $this->fleetValue;
-        
-        if($kind === "citation" || $kind === "kingair" || $kind === "caravan") {
-            switch($kind) {
-                case "citation":
-                    $value = 3200;
-                    break;
-                case "kingair":
-                    $value = 3900;
-                    break;
-                case "caravan":
-                    $value = 2300;
-                    break;
-                case "testplane":
-                    $value = 4000;
-                default:
-                    $value = 0;
+        $futureValue = $this->budget;
+        echo "FUTURE: " . $futureValue;
+        echo "Budget: " . $this->budget;
+        foreach($fleet as $plane) {
+            $id = $plane->airid;
+            if($id === "citation" || $id === "kingair" || $id === "caravan") {
+                switch($id) {
+                    case "citation":
+                        $value = 3200;
+                        break;
+                    case "kingair":
+                        $value = 3900;
+                        break;
+                    case "caravan":
+                        $value = 2300;
+                        break;
+                    default:
+                        $value = 0;
+                }
+                $futureValue -= $value;
             }
-            $futureBudget -= $value;
-        
-            if($value <= $futureBudget) {
-                $this->planes[] = $kind;
-            }
-                
-                    
         }
+        
+        if($futureValue <= $this->budget) {
+            $this->budget = $futureValue;
+            $this->planes = $fleet;
+        }
+        
     }
     
     public function getPlanes() {
         return $this->planes;
     }
     
+    public function setBudget($value) {
+        $this->budget = $value;
+    }
     
+    public function getBudget() {
+        return $this->budget;
+    }
     
     
 }
