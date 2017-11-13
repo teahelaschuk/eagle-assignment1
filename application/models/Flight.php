@@ -31,7 +31,7 @@ class Flight extends Entity {
     }
     
     public function getPlane() {
-        return $plane;
+        return $this->plane;
     }
     
     public function setArrivalTime($value) {
@@ -40,7 +40,7 @@ class Flight extends Entity {
     }
     
     public function getArrivalTime() {
-        return $value;
+        return $this->value;
         
     }
     

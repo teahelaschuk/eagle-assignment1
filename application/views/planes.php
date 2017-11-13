@@ -1,7 +1,7 @@
 
 <div id="body">
 
-    <h3>{name}</h3>
+    <h3>{airid}</h3>
     <table class="table table-striped">
         <thead>
         <tr>
@@ -15,7 +15,7 @@
         <tbody>
         <tr>
             <!-- table content taken from FleetInfo model -->
-            <td data-toggle="tooltip" data-placement="top" title="{port1} - {port2}">{airid}</td>
+            <td data-toggle="tooltip" data-placement="top" title="{port1} - {port2}">{id}</td>
             <td>{manufacturer}</td>
             <td>{model}</td>
             <td>{seats}</td>

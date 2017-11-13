@@ -152,3 +152,37 @@ Release Date: 11/12/2017
     - added user role data to put into the menu bar config/config.php, removed hard coded data
     - renamed the Actor function in controllers/Roles.php to (the more appropriately named) User_Role
 
+## *Version 2.0.5* 
+Release Date: 11/12/2017
+
+### Added
+
+    Core
+        - Added CSV_Model (NM)
+        - Added DataMapper (NM)
+        - Added Memory_Model (NM)
+    Data
+        - airplanes (NM)
+        - airports (NM)
+        - flights (NM)
+
+    
+### Updated
+    
+    Controllers
+        - Fleet allowed code to lookup Wacky data and access the new data from CSV (NM)
+
+    Models
+        - FleetInfo changed the way the class functioned to pull in CSV data (NM)
+
+    Views
+        - fleet added ways to access new csv data (NM)
+        - planes added ways to access new wacky data (NM)
+    Config
+        - routes updated routes to perform successful with new data (NM)
+    
+    Tests
+
+
+    Core
+        - My_Model added new models to be pulled in (NM)
