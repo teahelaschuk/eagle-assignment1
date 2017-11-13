@@ -22,25 +22,21 @@ class PlaneTest extends TestCase {
       $this->CI = &get_instance();
     }
     
+    /**
+     * Test all the plane data.
+     * Make sure it is the right kind and under the budget.
+     * 
+     */
     public function testPlane() {
         $this->CI->load->model('plane');
         
-        $this->CI->plane->planes = "caravan";
-        $this->CI->plane->planes = "asd";
-        $this->CI->plane->planes = "citation";
-        $this->CI->plane->planes = "kingair";
-        $this->CI->plane->planes = "testplane";
+        $data = (new FleetInfo())->all();
+        $this->CI->plane->budget = 10000;
+        $this->CI->plane->planes = $data;
+
+        $this->assertEquals(600, $this->CI->plane->budget);
+        $this->assertCount(3, $this->CI->plane->planes);
         
-        // BirdBrain owns caravan model
-        $this->assertContains("caravan", $this->CI->plane->planes);
-        
-        // Not part of BirdBrain airlines
-        $this->assertNotContains("asd", $this->CI->plane->planes);
-        $this->assertContains("citation", $this->CI->plane->planes);
-        $this->assertContains("kingair", $this->CI->plane->planes);
-        
-        // Check that there is not enough budget to get testplane
-        $this->assertNotContains("testplane", $this->CI->plane->planes);
         
     }
     
