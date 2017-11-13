@@ -19,6 +19,17 @@ class FleetInfo extends CSV_Model
 
     }
 
+    function get($key, $key2 = null)
+    {
+        $temp = (isset($this->_data[$key])) ? $this->_data[$key] : null;
+        $method ='https://wacky.jlparry.com/info/airplanes/'.$temp->airid;
+        $response = file_get_contents($method);
+        $tmp = (object) json_decode($response);
+        $tmp->airid = $temp->id;
+        return $tmp;
+
+    }
+
 
     // retrieve a single plane, null if not found
 

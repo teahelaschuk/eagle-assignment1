@@ -1,4 +1,4 @@
-id,airid,name
-1,"BB01","citation",
-2,"BB02","kingair",
-3,"BB03","caravan"
+id,airid
+"BB01","citation",
+"BB02","kingair",
+"BB03","caravan"
