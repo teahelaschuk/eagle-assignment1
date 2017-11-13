@@ -25,8 +25,8 @@
             <tr>
                 <!-- table content taken from FlightInfo model -->
                 <td>
-                    <a href="/fleet/{name}">
-                        {name}
+                    <a href="/fleet/{airid}">
+                        {airid}
                     </a>
                 </td>
 
