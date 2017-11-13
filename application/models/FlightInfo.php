@@ -6,10 +6,7 @@
  * Time: 3:42 PM
  */
 
-// Messes up with the phpunit. Remove comments only when local.
-function __autoload($class_name) {
-    require_once $class_name . '.php';
-}
+
 
 
 

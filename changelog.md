@@ -289,6 +289,7 @@ Release Date: 11/12/2017
    
        Models
            -flightinfo fixed data structure (NM)
+           - got rid of that pesky autoload function inside flightInfo (LH)
    
        Views
    
