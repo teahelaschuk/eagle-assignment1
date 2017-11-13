@@ -186,3 +186,37 @@ Release Date: 11/12/2017
 
     Core
         - My_Model added new models to be pulled in (NM)
+        
+## *Version 2.0.6* 
+Release Date: 11/12/2017
+
+### Added
+
+    Core
+
+    Data
+
+
+    
+### Updated
+    
+    Controllers
+        - Fleet changed to not have access to wacky server (NM)
+
+    Models
+        - FleetInfo added get get function and added wacky server lookup there (NM)
+
+    Views
+        - updated the id change (NM)
+        - updated the id change (NM)
+    Config
+        - routes updated routes to perform successful with new data (NM)
+    
+    Tests
+
+
+    Core
+    
+    Data
+        - airplanes added correct id information (NM)
+   
