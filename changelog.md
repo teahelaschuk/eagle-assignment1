@@ -301,3 +301,38 @@ Release Date: 11/12/2017
        Core
        
        Data
+       
+   ## *Version 2.0.9* 
+   Release Date: 11/23/2017
+   
+   ### Added
+   
+       Core
+   
+       Data
+       
+       Models
+        
+   
+   
+       
+   ### Updated
+       
+       Controllers
+        
+   
+       Models
+           - flightinfo fixed data structure (NM)
+           - Airportinfo added a class (NM)
+           - flightinfo added a class (NM)
+   
+       Views
+   
+       Config
+           
+       
+       Tests
+   
+       Core
+       
+       Data

@@ -39,4 +39,22 @@ class Airportinfo extends CSV_Model
         $tmp = (object) json_decode($response);
         return $tmp->airport;
     }
+    public function allCities(){
+        $hold = (isset($this->_data["eagle"])) ? $this->_data["eagle"] : null;
+        $method ='https://wacky.jlparry.com/info/airports/'.$hold->base;
+        $response = file_get_contents($method);
+        $tmp = (object) json_decode($response);
+        $method1 ='https://wacky.jlparry.com/info/airports/'.$hold->dest1;
+        $response1 = file_get_contents($method1);
+        $tmp1 = (object) json_decode($response1);
+        $method2 ='https://wacky.jlparry.com/info/airports/'.$hold->dest2;
+        $response2 = file_get_contents($method2);
+        $tmp2 = (object) json_decode($response2);
+        $method3 ='https://wacky.jlparry.com/info/airports/'.$hold->dest3;
+        $response3 = file_get_contents($method3);
+        $tmp3 = (object) json_decode($response3);
+        $final = array($tmp,$tmp1,$tmp2,$tmp3);
+        return $final;
+
+    }
 }
