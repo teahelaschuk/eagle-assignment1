@@ -17,16 +17,23 @@ class Booking extends Application
         $this->load->model('flightInfo');// load the model
         $this->load->model('airportinfo');
         $cities = $this->airportinfo->allCities();   //get cities to display in drop down
-        $this->data['cities'] = $cities->community;
-                      
+        $this->data['cities'] = $cities;        
+        
+        if(isset($_SESSION['departure']) && !empty($_SESSION['departure'])) {
+            $this->data['from'] = $this->session->userdata('departure');
+        }  
+        
+        if(isset($_SESSION['arrival']) && !empty($_SESSION['arrival'])) {
+            $this->data['to'] = $this->session->userdata('arrival');
+        } 
+         
         $this->render();        
     }      
     
     /* Work in progress */
-    public function submit() {
-//        $this->data['from'] = $_GET["departure"];
-//        $this->data['to'] = $_GET["arrival"];
-//        redirect($_SERVER['HTTP_REFERER']);    // go back
-    }
-    
+    public function submit() {      
+        $this->session->set_userdata('departure', $this->input->get('departure'));
+        $this->session->set_userdata('arrival', $this->input->get('arrival'));
+        redirect('/booking');
+    }  
 }

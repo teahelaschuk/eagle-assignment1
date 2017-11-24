@@ -3,12 +3,12 @@
     <div class="panel panel-default">
        <div class="panel-body">        
             <!-- flight booking form -->
-            <form role="form" action="/booking/submit" method="post">
+            <form role="form" action="/booking/submit" method="get">
                 <div class="form-group">
                     <label for="departure">Departing From:</label>
                     <select class="form-control" id="departure" name="departure">
                         {cities}
-                        <option>{name}</option>
+                        <option>{community}</option>
                         {/cities}
                     </select>
                 </div>
@@ -16,7 +16,7 @@
                     <label for="arrival">Arriving At:</label>
                     <select class="form-control" id="arrival" name="arrival">
                         {cities}
-                        <option>{name}</option>
+                        <option>{community}</option>
                         {/cities}
                     </select>
                 </div>                        
@@ -30,7 +30,7 @@
        <!-- trip options here
             Work in progress: having trouble getting data from form-->
        <div class="panel-body">
-           {to} <br/> {from}
+           {from} <br/> {to}
        </div>       
    </div>
    

@@ -319,6 +319,7 @@ Release Date: 11/12/2017
    ### Updated
        
        Controllers
+            - Booking.php: fixed form submission (TE)
         
    
        Models
@@ -327,6 +328,7 @@ Release Date: 11/12/2017
            - flightinfo added a class (NM)
    
        Views
+            - booking.php: fixed how data is being loaded into drop down list (TE)
    
        Config
            
