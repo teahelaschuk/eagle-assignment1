@@ -20,7 +20,11 @@
             {schedule}
             <tr>
                 <!-- table content taken from FlightInfo model -->
+<<<<<<< HEAD
                 <td data-toggle="tooltip" data-placement="top" title="{port1} - {port2}">{id}</td>
+=======
+                <td><a data-toggle="tooltip" data-placement="top" title="{port1} - {port2}">{flightid}</a></td>
+>>>>>>> 35bcbf7e884a737215d77af9799ecdee002e4c3a
                 <td>{from}</td>
                 <td>{to}</td>
                 <td>{dep}</td>
@@ -31,3 +35,9 @@
         </tbody>
     </table>        
 </div>
+<!-- Make tooltip look pretty -->
+<script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip(); 
+    });
+</script>

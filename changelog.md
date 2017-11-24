@@ -131,6 +131,7 @@ Release Date: 11/9/2017
 
     Views
         - views/_menubar.php: added dropdown menu to navbar for selecting roles, displays role if set (TE)
+        - Made tooltip look pretty for each flight number
 
     Config
         - app/config/autoload.php, config/config.php: enabled sessions (TE)
@@ -329,6 +330,45 @@ Release Date: 11/12/2017
    
        Views
             - booking.php: fixed how data is being loaded into drop down list (TE)
+   
+       Config
+           
+       
+       Tests
+   
+       Core
+       
+       Data
+
+## *Version 2.1.0* 
+   Release Date: 11/25/2017
+   
+   ### Added
+      
+       Controllers
+
+       Core
+   
+       Data
+       
+       Models
+        
+       Views
+   
+       Tests
+            - Added FlightTest (LH)
+       
+   ### Updated
+       
+       Controllers
+            - fleet adding showing kinda gucci (LH)
+        
+   
+       Models
+           - fleetInfo has rules for validation (LH)
+   
+       Views
+
    
        Config
            

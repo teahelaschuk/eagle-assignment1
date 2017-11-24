@@ -6,10 +6,6 @@
  * Time: 3:42 PM
  */
 
-
-
-
-
 class FlightInfo extends CSV_Model
 {
 
@@ -27,7 +23,6 @@ class FlightInfo extends CSV_Model
         return !isset($this->data[$which]) ? null : $this->data[$which];
     }
 
-
     function setFrom(){
         foreach($this->_data as $tasks){
             $method1 ='https://wacky.jlparry.com/info/airports/'.$tasks->port1;
@@ -37,6 +32,7 @@ class FlightInfo extends CSV_Model
 
         }
     }
+    
     function setTo(){
         foreach($this->_data as $flight){
             $method2 ='https://wacky.jlparry.com/info/airports/'.$flight->port2;
