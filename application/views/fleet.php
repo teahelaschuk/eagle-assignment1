@@ -21,6 +21,7 @@
             </tr>
             </thead>
             <tbody>
+            {add}
             {planes}
             <tr>
                 <!-- table content taken from FlightInfo model -->

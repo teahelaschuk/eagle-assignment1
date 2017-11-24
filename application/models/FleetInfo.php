@@ -29,7 +29,17 @@ class FleetInfo extends CSV_Model
         return $tmp;
 
     }
+    
+    // provide form validation rules
+    public function rules() {
+        $config = array(
+            ['field' => 'id', 'label' => 'ID', 'rules' => 'alpha_numeric_spaces|max_length[64]'],
+            ['field' => 'airid', 'label' => 'Plane ID', 'alpha_numeric_spaces|max_length[64]'],
+        );
+        return $config;
+    }
 
+    
 
     // retrieve a single plane, null if not found
 
