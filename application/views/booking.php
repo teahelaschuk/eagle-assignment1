@@ -27,10 +27,14 @@
        </div>
     </div>
    <div class="panel panel-default">
-       <!-- trip options here
-            Work in progress: having trouble getting data from form-->
+       <div class="panel-heading">
+           Trips from {from} to {to}:
+       </div>
        <div class="panel-body">
-           {from} <br/> {to}
+           {trips}
+           {id}
+           <br/>
+           {/trips}           
        </div>       
    </div>
    
