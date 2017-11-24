@@ -1,6 +1,5 @@
 <h1>{modifyTitle}</h1>
 <form role="form" action="/fleet/submit" method="post">
-    {fid}<br>
     {fairid}<br>
     {zsubmit}<br>
 </form>

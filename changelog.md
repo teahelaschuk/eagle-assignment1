@@ -336,3 +336,42 @@ Release Date: 11/12/2017
        Core
        
        Data
+
+## *Version 2.1.0* 
+   Release Date: 11/25/2017
+   
+   ### Added
+      
+       Controllers
+
+       Core
+   
+       Data
+       
+       Models
+        
+       Views
+   
+       Tests
+            - Added FlightTest (LH)
+       
+   ### Updated
+       
+       Controllers
+            - fleet adding showing kinda gucci (LH)
+        
+   
+       Models
+           - fleetInfo has rules for validation (LH)
+   
+       Views
+
+   
+       Config
+           
+       
+       Tests
+   
+       Core
+       
+       Data
