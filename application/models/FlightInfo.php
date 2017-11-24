@@ -6,10 +6,6 @@
  * Time: 3:42 PM
  */
 
-
-
-
-
 class FlightInfo extends CSV_Model
 {
 
