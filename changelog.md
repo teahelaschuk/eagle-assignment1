@@ -105,58 +105,25 @@ Release Date: 11/9/2017
 ### Added
 
     Controllers
-        - controllers/Roles.php: created controller with an actor() method to store the role after it is selected in the drop down menu (TE)
+        - Roles.php: created controller with an actor() method to store the role after it is selected in the drop down menu (TE)
+        - Booking.php: displays booking, still needs work (TE)
     
     Models
-        - Added Flight Entity Model
+        - Added Flight Entity Model(LH)
+        - Airportinfo added to help with CSV files (NM)
 
     Views
+        - booking.php: form layout (TE)    
+
 
     Config
         - libraries/parsedown.php: added library (TE)
         - /tmp: created folder for storing sessions (TE)
 
     Tests
-        - Added FlightTest
-        - Added .travis.yml for Travis-CI
-
-    Core
-    
-### Updated
-    
-    Controllers
-
-    Models
-        - Renamed Planes entity model to Plane
-
-    Views
-        - views/_menubar.php: added dropdown menu to navbar for selecting roles, displays role if set (TE)
-        - Made tooltip look pretty for each flight number
-
-    Config
-        - app/config/autoload.php, config/config.php: enabled sessions (TE)
-    
-    Tests
-        - Renamed PlanesTest to PlaneTest
-
-    Core
-        - gitignored the .idea file (TE)
-        - app/config/constants.php: added user role constants (TE)
-        - fixed tmp folder and git ignore (TE)
-
-## *Version 2.0.4* 
-Release Date: 11/12/2017
-
-## Updated
- - fixed my (TE) bad code from last day, i.e.
-    - removed PHP from _menubar.php view
-    - added user role data to put into the menu bar config/config.php, removed hard coded data
-    - renamed the Actor function in controllers/Roles.php to (the more appropriately named) User_Role
-
-## *Version 2.0.5* 
-Release Date: 11/12/2017
-
-### Added
+        - Added FlightTest(LH)
+        - Added .travis.yml for Travis-CI(LH)
+        - Added FlightTest (LH)
 
     Core
         - Added CSV_Model (NM)
@@ -166,226 +133,59 @@ Release Date: 11/12/2017
         - airplanes (NM)
         - airports (NM)
         - flights (NM)
-
     
 ### Updated
     
     Controllers
+        - renamed the Actor function in controllers/Roles.php to (the more appropriately named) User_Role(TE)
         - Fleet allowed code to lookup Wacky data and access the new data from CSV (NM)
+        - Fleet changed to not have access to wacky server (NM)
+        - Fleet fixed data structure (NM)
+        - Flights fixed data structure (NM)
+        - Welcome fixed data structure (NM)
+        - Booking.php: fixed form submission (TE)
+        - fleet adding showing kinda gucci (LH)
+        - Booking.php: started booking functionality, passing data with sample data (TE)  
 
     Models
+        - Renamed Planes entity model to Plane(LH)
         - FleetInfo changed the way the class functioned to pull in CSV data (NM)
+        - FleetInfo added get get function and added wacky server lookup there (NM)
+        - Plane has setter to check if our plane data is valid(LH)
+        -flightinfo fixed data structure (NM)
+        - got rid of that pesky autoload function inside flightInfo (LH)
+        - flightinfo fixed data structure (NM)
+        - Airportinfo added a class (NM)
+        - flightinfo added a class (NM)
+        - booking.php: fixed how data is being loaded into drop down list (TE)
+        - fleetInfo has rules for validation (LH)
 
     Views
+        - views/_menubar.php: added dropdown menu to navbar for selecting roles, displays role if set (TE)
+        - Made tooltip look pretty for each flight number
+        - removed PHP from _menubar.php view
         - fleet added ways to access new csv data (NM)
         - planes added ways to access new wacky data (NM)
-    Config
-        - routes updated routes to perform successful with new data (NM)
-    
-    Tests
-
-
-    Core
-        - My_Model added new models to be pulled in (NM)
+        - updated the id change (NM)
+        - booking.php: added panel to display different flight possibilities (TE)
         
-## *Version 2.0.6* 
-Release Date: 11/12/2017
-
-### Added
-
-    Core
-
-    Data
-
-
-    
-### Updated
-    
-    Controllers
-        - Fleet changed to not have access to wacky server (NM)
-
-    Models
-        - FleetInfo added get get function and added wacky server lookup there (NM)
-
-    Views
-        - updated the id change (NM)
-        - updated the id change (NM)
     Config
+        - app/config/autoload.php, config/config.php: enabled sessions (TE)
+        - added user role data to put into the menu bar config/config.php, removed hard coded data
         - routes updated routes to perform successful with new data (NM)
+        - routes updated routes to perform successful with new data (NM)
+        - added Booking to menu bar     (TE)    
     
     Tests
-
+        - Renamed PlanesTest to PlaneTest(LH)
+        - Uses plane entity model to check if all our plane data is valid(LH)
 
     Core
+        - gitignored the .idea file (TE)
+        - app/config/constants.php: added user role constants (TE)
+        - fixed tmp folder and git ignore (TE)
+        - My_Model added new models to be pulled in (NM)
     
     Data
         - airplanes added correct id information (NM)
-
-## *Version 2.0.7* 
-Release Date: 11/12/2017
-
-### Added
-
-    Core
-
-    Data
-
-
-    
-### Updated
-    
-    Controllers
         
-
-    Models
-        - Plane has setter to check if our plane data is valid
-
-    Views
-
-    Config
-        
-    
-    Tests
-        - Uses plane entity model to check if all our plane data is valid
-
-    Core
-    
-    Data
-
-## *Version 2.0.8* 
-Release Date: 11/12/2017
-
-### Added
-    Views:
-        - booking.php: form layout (TE)    
-    Controllers:
-        - Booking.php: displays booking, still needs work (TE)
-    
-### Updated            
-    Config:
-        - added Booking to menu bar     (TE)    
-        
-      
-
-   ## *Version 2.0.9* 
-   Release Date: 11/12/2017
-   
-   ### Added
-   
-       Core
-   
-       Data
-       
-       Models
-        -Airportinfo added to help with CSV files (NM)
-   
-   
-       
-   ### Updated
-       
-       Controllers
-        - Fleet fixed data structure (NM)
-        - Flights fixed data structure (NM)
-        - Welcome fixed data structure (NM)   
-   
-       Models
-           -flightinfo fixed data structure (NM)
-           - got rid of that pesky autoload function inside flightInfo (LH)
-   
-       Views
-   
-       Config
-           
-       
-       Tests
-   
-       Core
-       
-       Data
-       
-   ## *Version 2.0.9* 
-   Release Date: 11/23/2017
-   
-   ### Added
-   
-       Core
-   
-       Data
-       
-       Models
-        
-   
-   
-       
-   ### Updated
-       
-       Controllers
-            - Booking.php: fixed form submission (TE)
-        
-   
-       Models
-           - flightinfo fixed data structure (NM)
-           - Airportinfo added a class (NM)
-           - flightinfo added a class (NM)
-   
-       Views
-            - booking.php: fixed how data is being loaded into drop down list (TE)
-   
-       Config
-           
-       
-       Tests
-   
-       Core
-       
-       Data
-
-## *Version 2.0.10* 
-   Release Date: 11/23/2017
-   
-   ### Added
-      
-       Controllers
-
-       Core
-   
-       Data
-       
-       Models
-        
-       Views
-   
-       Tests
-            - Added FlightTest (LH)
-       
-   ### Updated
-       
-       Controllers
-            - fleet adding showing kinda gucci (LH)
-        
-   
-       Models
-           - fleetInfo has rules for validation (LH)
-   
-       Views
-
-   
-       Config
-           
-       
-       Tests
-   
-       Core
-       
-       Data
-
-## *Version 2.0.11* 
-   Release Date: 11/23/2017
-       
-   ### Updated
-       
-       Controllers
-            - Booking.php: started booking functionality, passing data with sample data (TE)      
-   
-       Views
-            - booking.php: added panel to display different flight possibilities (TE)
