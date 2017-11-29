@@ -340,8 +340,8 @@ Release Date: 11/12/2017
        
        Data
 
-## *Version 2.1.0* 
-   Release Date: 11/25/2017
+## *Version 2.0.10* 
+   Release Date: 11/23/2017
    
    ### Added
       
@@ -378,3 +378,14 @@ Release Date: 11/12/2017
        Core
        
        Data
+
+## *Version 2.0.11* 
+   Release Date: 11/23/2017
+       
+   ### Updated
+       
+       Controllers
+            - Booking.php: started booking functionality, passing data with sample data (TE)      
+   
+       Views
+            - booking.php: added panel to display different flight possibilities (TE)

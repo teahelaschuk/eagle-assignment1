@@ -19,12 +19,16 @@ class Booking extends Application
         $cities = $this->airportinfo->allCities();   //get cities to display in drop down
         $this->data['cities'] = $cities;        
         
+        // session variables for departure and arrival
         if(isset($_SESSION['departure']) && !empty($_SESSION['departure'])) {
             $this->data['from'] = $this->session->userdata('departure');
-        }  
-        
+        }        
         if(isset($_SESSION['arrival']) && !empty($_SESSION['arrival'])) {
             $this->data['to'] = $this->session->userdata('arrival');
+        } 
+        
+        if(isset($_SESSION['trips']) && !empty($_SESSION['trips'])) {
+            $this->data['trips'] = $this->session->userdata('trips');  
         } 
          
         $this->render();        
@@ -34,6 +38,12 @@ class Booking extends Application
     public function submit() {      
         $this->session->set_userdata('departure', $this->input->get('departure'));
         $this->session->set_userdata('arrival', $this->input->get('arrival'));
+        
+        // sample data
+        $tripplans = array( array('id' => 'sample trip 1'), 
+                            array('id' => 'sample trip 2'));
+        
+        $this->session->set_userdata('trips', $tripplans);    
         redirect('/booking');
     }  
 }
