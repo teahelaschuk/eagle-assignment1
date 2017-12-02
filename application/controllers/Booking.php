@@ -43,13 +43,28 @@ class Booking extends Application
         $flights = $this->flightInfo->all(); 
         
         $trips = array();
-        foreach($flights as $f) {            
-            if($f->fromcommunity === $this->session->userdata('departure')) {
-                array_push($trips, $f);
-            }
-            else {
-                print($f->from . ": " . $this->session->userdata('departure') . "    d    ");
-            }
+        foreach($flights as $f) { 
+            if($f->tocommunity === $this->session->userdata('arrival')) {
+                // 1 leg trips
+                if($f->fromcommunity === $this->session->userdata('departure')) {
+                    
+                    $a = array('legs' => array($f));
+                    array_push($trips, $a); 
+                    
+                // 2 leg trips
+                } else {
+                    foreach($flights as $f2) {     
+                        if($f2->tocommunity === $f->fromcommunity) {
+                            if($f2->fromcommunity === $this->session->userdata('departure')) {
+                                $a = array('legs' => array($f2, $f));
+                                array_push($trips, $a); 
+                            }
+                        }
+                    }
+                    
+                    
+                }
+            }            
         }
         
         // sample data
