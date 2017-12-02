@@ -26,16 +26,35 @@
             </form>  
        </div>
     </div>
-   <div class="panel panel-default">
-       <div class="panel-heading">
-           Trips from {from} to {to}:
-       </div>
-       <div class="panel-body">
-           {trips}
-           {id}
-           <br/>
-           {/trips}           
-       </div>       
-   </div>
+    
+   <table class="table table-striped">
+        <thead>
+            <tr>
+                <!-- table headers -->
+                <td><b>Flight Number</b></td>
+                <td><b>From</b></td>
+                <td><b>To</b></td>
+                <td><b>Departure</b></td>
+                <td><b>Arrival</b></td>
+                <td><b>Plane</b></td>
+            </tr>
+        </thead>
+        <tbody>
+            {trips}
+            <tr>
+                <!-- table content taken from FlightInfo model -->
+                <td><a data-toggle="tooltip" data-placement="top" title="{port1} - {port2}">{id}</a></td>
+                <td>{from}</td>
+                <td>{to}</td>
+                <td>{dep}</td>
+                <td>{arr}</td>
+                <td>{plane}</td>
+            </tr>
+            {/trips}
+        </tbody>
+    </table> 
+   
+   <br/>
+   <br/>
    
 </div>
