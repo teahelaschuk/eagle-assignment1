@@ -37,12 +37,26 @@ class Booking extends Application
     public function submit() {      
         $this->session->set_userdata('departure', $this->input->get('departure'));
         $this->session->set_userdata('arrival', $this->input->get('arrival'));
+                
+        $trips = $this->get_trips();
+               
+        
+        // sample data
+        //$tripplans = array( array('id' => 'sample trip 1'), 
+        //                    array('id' => 'sample trip 2'));
+        
+        $this->session->set_userdata('trips', $trips); 
+        $this->data['trips'] = $trips;
+        redirect('/booking');
+    }  
+    
+    public function get_trips() {
+        $trips = array();
         
         // get flights
         $this->load->model('flightInfo');// load the model
         $flights = $this->flightInfo->all(); 
         
-        $trips = array();
         foreach($flights as $f) { 
             if($f->tocommunity === $this->session->userdata('arrival')) {
                 // 1 leg trips
@@ -58,21 +72,31 @@ class Booking extends Application
                             if($f2->fromcommunity === $this->session->userdata('departure')) {
                                 $a = array('legs' => array($f2, $f));
                                 array_push($trips, $a); 
+                            
+                            // 3 leg trips    
+                            } else {
+                                foreach($flights as $f3) {     
+                                    if($f3->tocommunity === $f2->fromcommunity && 
+                                       $f3->fromcommunity === $this->session->userdata('departure')) {
+                                            $a = array('legs' => array($f3, $f2, $f));
+                                            array_push($trips, $a);                                         
+                                       }
+                                    }
+                                }
                             }
                         }
-                    }
-                    
-                    
-                }
-            }            
+                    } 
+                }                
+            }
+        return $trips;  
+    } 
+    
+    // Work in progress  *add 30 minutes
+    private function validate_transfer($f1, $f2) {
+        if(strtotime($f1->arr)>strtotime($f2->dep)) {
+            
+        } else {
+            
         }
-        
-        // sample data
-        //$tripplans = array( array('id' => 'sample trip 1'), 
-        //                    array('id' => 'sample trip 2'));
-        
-        $this->session->set_userdata('trips', $trips); 
-        $this->data['trips'] = $trips;
-        redirect('/booking');
-    }  
+    }
 }
