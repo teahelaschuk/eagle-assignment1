@@ -188,4 +188,16 @@ Release Date: 11/9/2017
     
     Data
         - airplanes added correct id information (NM)
-        
+       
+## *Version 2.0.4* 
+Release Date: 11/12/2017
+
+### Updated
+    Models
+        - pulled airport community data from server (TE) 
+
+    Controllers
+        - Booking.php: added logic to find trip plans (work in progress) (TE)
+
+    Views
+        - booking.php: edited display for trip plans (TE)

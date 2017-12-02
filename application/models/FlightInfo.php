@@ -29,6 +29,7 @@ class FlightInfo extends CSV_Model
             $response1 = file_get_contents($method1);
             $tmp1 = (object) json_decode($response1);
             $tasks->from = $tmp1->airport;
+            $tasks->fromcommunity = $tmp1->community;
 
         }
     }
