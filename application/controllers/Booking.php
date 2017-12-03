@@ -21,7 +21,8 @@ class Booking extends Application
         // session variables for departure and arrival
         if(isset($_SESSION['departure']) && !empty($_SESSION['departure'])) {
             $this->data['from'] = $this->session->userdata('departure');
-        }        
+        }       
+        
         if(isset($_SESSION['arrival']) && !empty($_SESSION['arrival'])) {
             $this->data['to'] = $this->session->userdata('arrival');
         } 
@@ -33,23 +34,19 @@ class Booking extends Application
         $this->render();        
     }      
     
-    /* Work in progress */
     public function submit() {      
         $this->session->set_userdata('departure', $this->input->get('departure'));
         $this->session->set_userdata('arrival', $this->input->get('arrival'));
                 
         $trips = $this->get_trips();
-               
-        
-        // sample data
-        //$tripplans = array( array('id' => 'sample trip 1'), 
-        //                    array('id' => 'sample trip 2'));
         
         $this->session->set_userdata('trips', $trips); 
         $this->data['trips'] = $trips;
         redirect('/booking');
     }  
     
+    // O(n^3)h my, this is inefficient
+    // returns all viable trips, with up to 3 legs
     public function get_trips() {
         $trips = array();
         
@@ -59,9 +56,9 @@ class Booking extends Application
         
         foreach($flights as $f) { 
             if($f->tocommunity === $this->session->userdata('arrival')) {
+                
                 // 1 leg trips
-                if($f->fromcommunity === $this->session->userdata('departure')) {
-                    
+                if($f->fromcommunity === $this->session->userdata('departure')) {                    
                     $a = array('legs' => array($f));
                     array_push($trips, $a); 
                     
@@ -70,16 +67,20 @@ class Booking extends Application
                     foreach($flights as $f2) {     
                         if($f2->tocommunity === $f->fromcommunity) {
                             if($f2->fromcommunity === $this->session->userdata('departure')) {
-                                $a = array('legs' => array($f2, $f));
-                                array_push($trips, $a); 
+                                if($this->validate_transfer($f2, $f)) {
+                                    $a = array('legs' => array($f2, $f));
+                                    array_push($trips, $a); 
+                                }
                             
                             // 3 leg trips    
                             } else {
                                 foreach($flights as $f3) {     
                                     if($f3->tocommunity === $f2->fromcommunity && 
                                        $f3->fromcommunity === $this->session->userdata('departure')) {
-                                            $a = array('legs' => array($f3, $f2, $f));
-                                            array_push($trips, $a);                                         
+                                            if($this->validate_transfer($f2, $f) && $this->validate_transfer($f3, $f2)) {
+                                                $a = array('legs' => array($f3, $f2, $f));
+                                                array_push($trips, $a);  
+                                            }
                                        }
                                     }
                                 }
@@ -91,12 +92,20 @@ class Booking extends Application
         return $trips;  
     } 
     
-    // Work in progress  *add 30 minutes
+    // Checks the time between two flights, and returns
+    // false if the distance is less than 30 minutes
     private function validate_transfer($f1, $f2) {
-        if(strtotime($f1->arr)>strtotime($f2->dep)) {
-            
-        } else {
-            
+        
+        $dt1 = new DateTime($f1->arr);
+        $dt2 = new DateTime($f2->dep);
+                
+        $since_start = $dt1->diff($dt2); 
+        
+        if($since_start->invert) {
+            return false;
         }
+        
+        $minutes = ($since_start->h * 60) + ($since_start->i);                
+        return (($minutes > 30) ? true : false);         
     }
 }

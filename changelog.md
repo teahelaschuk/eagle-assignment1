@@ -197,7 +197,7 @@ Release Date: 11/12/2017
         - pulled airport community data from server (TE) 
 
     Controllers
-        - Booking.php: added logic to find trip plans (work in progress) (TE)
+        - Booking.php: added logic to find trip plans (TE)
 
     Views
         - booking.php: edited display for trip plans (TE)
