@@ -33,7 +33,7 @@ class FleetInfo extends CSV_Model
     // provide form validation rules
     public function rules() {
         $config = array(
-            ['field' => 'airid', 'label' => 'Plane ID', 'rules' => 'alpha_numeric_spaces|max_length[64]'],
+            ['field' => 'airid', 'label' => 'Plane ID', 'rules' => 'regex_match[/([A-Z])\w+/g]'],
         );
         return $config;
     }

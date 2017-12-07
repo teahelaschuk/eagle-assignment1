@@ -93,15 +93,20 @@ class Fleet extends Application {
         // retrieve & update data transfer buffer
         $plane = (array) $this->session->userdata('plane');
         $plane = array_merge($plane, $this->input->post());
-        var_dump($this->input->post());
+        
+        unset($plane["airid"]);
+        unset($plane["submit"]);
+        
         $plane = (object) $plane;  // convert back to object
+        
         $this->session->set_userdata('plane', (object) $plane);
         
         // validate away
         if ($this->form_validation->run()) {
             if (empty($plane->id)) {
                 $number = $this->fleetInfo->all();
-                $plane->id = count($number) + 1;
+                $test = (string)count($number) + 1;
+                $plane->id = "BB0".$test;
                 $this->fleetInfo->add($plane);
                 $this->alert('Fleet ' . $plane->id . ' added', 'success');
             } else {

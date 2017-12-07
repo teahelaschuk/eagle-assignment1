@@ -146,6 +146,7 @@ Release Date: 11/9/2017
         - Booking.php: fixed form submission (TE)
         - fleet adding showing kinda gucci (LH)
         - Booking.php: started booking functionality, passing data with sample data (TE)  
+        - fixed submit function for Fleet.php (LH)
 
     Models
         - Renamed Planes entity model to Plane(LH)
@@ -159,6 +160,7 @@ Release Date: 11/9/2017
         - flightinfo added a class (NM)
         - booking.php: fixed how data is being loaded into drop down list (TE)
         - fleetInfo has rules for validation (LH)
+        - FleetInfo accepts correct info (LH)
 
     Views
         - views/_menubar.php: added dropdown menu to navbar for selecting roles, displays role if set (TE)
@@ -168,6 +170,7 @@ Release Date: 11/9/2017
         - planes added ways to access new wacky data (NM)
         - updated the id change (NM)
         - booking.php: added panel to display different flight possibilities (TE)
+        - Fleetadd.php: add Plane text (LH)
         
     Config
         - app/config/autoload.php, config/config.php: enabled sessions (TE)
