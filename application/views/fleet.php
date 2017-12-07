@@ -21,12 +21,13 @@
             </tr>
             </thead>
             <tbody>
+            {add}
             {planes}
             <tr>
                 <!-- table content taken from FlightInfo model -->
                 <td>
-                    <a href="/fleet/{name}">
-                        {name}
+                    <a href="/fleet/{id}">
+                        {id}
                     </a>
                 </td>
 

@@ -1,5 +1,7 @@
 <?php
 
+require_once 'DataMapper.php';
+
 if (!defined('BASEPATH'))
 	exit('No direct script access allowed');
 
@@ -477,5 +479,9 @@ class MY_Model2 extends MY_Model {
 	}
 
 }
+
+include_once 'Entity.php';
+include_once 'Memory_Model.php';	// In-memory only
+include_once 'CSV_Model.php';	// CSV persisted
 
 /* End of file */
