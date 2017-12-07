@@ -27,6 +27,8 @@
        </div>
     </div>
     
+   
+   {trips}
    <table class="table table-striped">
         <thead>
             <tr>
@@ -40,7 +42,7 @@
             </tr>
         </thead>
         <tbody>
-            {trips}
+            {legs}
             <tr>
                 <!-- table content taken from FlightInfo model -->
                 <td><a data-toggle="tooltip" data-placement="top" title="{port1} - {port2}">{id}</a></td>
@@ -50,9 +52,10 @@
                 <td>{arr}</td>
                 <td>{plane}</td>
             </tr>
-            {/trips}
+            {/legs}
         </tbody>
     </table> 
+    {/trips}
    
    <br/>
    <br/>
